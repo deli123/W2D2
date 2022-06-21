@@ -37,7 +37,7 @@ class Hotel
 
     def list_rooms
         @rooms.each_key do |room_name|
-            puts room_name + @rooms[room_name].available_space.to_s
+            puts room_name + ": " + @rooms[room_name].available_space.to_s
         end
     end
 end
