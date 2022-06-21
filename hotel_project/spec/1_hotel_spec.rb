@@ -90,8 +90,8 @@ describe "PART 2" do
       end
 
       context "when the specified room does not exist" do
-        it "should print 'sorry, room does not exist'" do
-          expect { hotel.check_in("Rick", "Kitchen") }.to output(/sorry/).to_stdout
+        it "should print 'Sorry, room does not exist'" do
+          expect { hotel.check_in("Rick", "Kitchen") }.to output(/Sorry/).to_stdout
         end
       end
 
@@ -115,10 +115,10 @@ describe "PART 2" do
         end
 
         context "when Room#add_occupant fails" do
-          it "should print 'sorry, room is full'" do
+          it "should print 'Sorry, room is full'" do
             hotel.check_in("Rick", "Attic")
             hotel.check_in("Morty", "Attic")
-            expect { hotel.check_in("Jerry", "Attic") }.to output(/sorry/).to_stdout
+            expect { hotel.check_in("Jerry", "Attic") }.to output(/Sorry/).to_stdout
           end
         end
       end
